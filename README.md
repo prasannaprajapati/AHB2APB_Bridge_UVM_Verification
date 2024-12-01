@@ -151,7 +151,7 @@ The AHB burst signal (`HBURST[2:0]`) indicates the type of burst being performed
 New_Address = Previous_Address + (2^Size)
 ```
 
-3. **Wrapping Burst (WRAP4/8/16)**
+3. **Wrapping Burst (WRAP 4/8/16)**
    - Fixed length of 4, 8, or 16 beats
    - Address wraps at boundary
    - Used for cache line operations
@@ -162,10 +162,10 @@ Starting_addr = (haddr/((2^hsize) * Length)) * ((2^hsize) * Length)
 Boundary_addr = Starting_addr + ((2^hsize) * Length)
 ```
 
-4. **Incrementing Burst (INCR4/8/16)**
+4. **Incrementing Burst (INCR 4/8/16)**
    - Fixed length of 4, 8, or 16 beats
    - Address increments after each transfer
-   - Used for block transfersding ahb-signal-docs.mdâ€¦]()
+   - Used for block transfering ahb-signal.
 
 **Example (WRAP4, 2-byte transfer):**
 * Initial address: 24
@@ -183,14 +183,14 @@ Boundary_addr = Starting_addr + ((2^hsize) * Length)
 * 2'b10: 4 bytes (32 bits)
 * 2'b11: 8 bytes (64 bits)
    
-* Example-
+* For Example-
 * Hwrite== 1
 * Hsize== 2'b00 (1bytes)
-* Haddr== 2e882088
+* Haddr== 2E882088
 
 **Address Breakdown:**
 
-* The address Haddr = 0x2E882088 is a 32-bit address.
+* The address Haddr= 2E882088 is a 32-bit address.
 *It is broken down into 4 bytes:
 **Byte 4:** 0x2E, **Byte 3:** 0x88, **Byte 2:** 0x20, **Byte 1:** 0x88.
 
@@ -205,7 +205,7 @@ Boundary_addr = Starting_addr + ((2^hsize) * Length)
 
 **Data Verification:**
 
-* The data to be transferred is stored in Hwdata = 0x3E 0x5F 0x22 0x94, broken down into 4 bytes:
+* The data to be transferred is stored in Hwdata= 3E5F2294, broken down into 4 bytes:
 
 * **Byte 4:** 0x3E, **Byte 3:** 0x5F, **Byte 2:** 0x22, **Byte 1:** 0x94.
 * The lower **2 bits** of each byte are examined for the transfer:
@@ -217,7 +217,7 @@ Boundary_addr = Starting_addr + ((2^hsize) * Length)
 * **Address Match:** Ensures the correct byte of memory is accessed based on the Haddr and Paddr.
 * **Data Match:** Verifies the transferred data (Hwdata) matches the expected data (Pdata).
 
-## 4. Verification Guidelines
+## 4. Verification Results
 
 ### Coverage Points
 1. **Transfer Types**
