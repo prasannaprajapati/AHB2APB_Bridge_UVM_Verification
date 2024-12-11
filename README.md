@@ -21,6 +21,9 @@ Bridge will do the following: Latches address and holds it valid throughout the 
    * Wrap Burst
 4. [Verification Results](#4-verification-results)
 
+## TB Architecture
+![Image Alt Text](TB.png)
+
 ## 1. Protocol Features
 
 ###  Advanced High-Performance Bus (AHB) Features
@@ -100,8 +103,7 @@ Bridge will do the following: Latches address and holds it valid throughout the 
    * Error responses
    * Reset during transfer
    * Different transfer sizes
-## TB Architecture
-![Image Alt Text](TB.png)
+
 ## 3. AHB Transfer Sequences
 
 ### Base Sequence Class
@@ -183,7 +185,7 @@ Boundary_addr = Starting_addr + ((2^hsize) * Length)
 * 2'b10: 4 bytes (32 bits)
 * 2'b11: 8 bytes (64 bits)
    
-* For Example-
+**FOR EXAMPLE:**
 * Hwrite== 1
 * Hsize== 2'b00 (1bytes)
 * Haddr== 2E882088
