@@ -184,8 +184,8 @@ Boundary_addr = Starting_addr + ((2^hsize) * Length)
 * 2'b01: 2 bytes (16 bits)
 * 2'b10: 4 bytes (32 bits)
 * 2'b11: 8 bytes (64 bits)
-   
-**FOR EXAMPLE:**
+
+  ## FOR EXAMPLE:
 * Hwrite== 1
 * Hsize== 2'b00 (1bytes)
 * Haddr== 2E882088
